@@ -114,10 +114,10 @@ function App() {
         </select>
       </div>
       <div className="socialbar">
-        <a className="social-link" href="/">
+        <a className="social-link" href="https://twitter.com/kevin_taufer" target="_blank" >
           <img src={Twitter} />
         </a>
-        <a className="social-link" href="/">
+        <a className="social-link" href="https://github.com/KevDev99" target="_blank">
           <img src={Github} />
         </a>
       </div>    
