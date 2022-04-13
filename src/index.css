@@ -1,0 +1,229 @@
+
+@font-face {
+font-family: "ShadowIntoLight";
+src: local("ShadowIntoLight"),
+ url("./assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf") format("truetype");
+font-weight: bold;
+}
+
+@font-face {
+font-family: "NunitoSans";
+src: local("NunitoSans"),
+ url("./assets/fonts/Nunito_Sans/NunitoSans-Regular.ttf") format("truetype");
+font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  background-color: #fafafa;
+  font-family: 'ShadowIntoLight';
+    max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+main {
+
+  text-align: center;
+  vertical-align: center;
+  margin-top: 4em;
+}
+
+.joker-img {
+  height: 20rem;
+  animation-name: spinLeftRight;
+  animation-duration: 4300ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.joker-btn {
+  font-size: 2.5rem;
+  background: transparent;
+  border: none;
+  font-family: 'ShadowIntoLight';
+  margin-top: 1rem;
+}
+
+.joker-btn:hover {
+  border-bottom: 3px solid black;
+  cursor: pointer;
+}
+
+@keyframes spinLeftRight {
+    0% {
+      transform:rotate(0deg);
+    }
+    30% {
+      transform:rotate(-10deg);
+    }
+    75% {
+      transform:rotate(10deg);
+    }
+    100% {
+      transform:rotate(0deg);
+    }
+}
+
+.joke-container {
+  margin-top: 2rem;
+}
+
+.joke-text {
+  font-family: 'ShadowIntoLight';
+}
+
+
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;font-family: 'ShadowIntoLight';
+  
+}
+
+.logo > h1 {
+  border-bottom: 3px solid black;
+}
+
+.logo > span {
+
+  height: 50%;
+  margin-left: .5rem;
+}
+
+.socialbar {
+  
+  display: flex;
+  justify-content: flex-end;
+
+  align-items: center;
+  
+}
+
+.social-link>img {
+  height: 26px;
+  width: 26px;
+  padding: 7px;
+}
+
+.language>select {
+  font-family: 'ShadowIntoLight';
+  background-color: #fafafa
+}
+
+
+/* Utils */
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+.flex {
+  display: flex;
+  height: 100%;
+}
+
+.d-row {
+  flex-direction: row;
+}
+
+.d-col {
+  flex-direction: column;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.al-center {
+  align-items: center;
+}
+
+.err-text {
+  color: red;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #303030;
+  color: #303030;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #303030;
+  color: #303030;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #303030;
+  color: #303030;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #303030;
+  }
+  50%,
+  100% {
+    background-color: #8c8c8c;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 1200px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
