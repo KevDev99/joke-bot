@@ -79,7 +79,7 @@ function App() {
     if(data.type === "single") {
       setJoke(data.joke)
       setJokeQuestion(null);
-      const jokeSpeech = new SpeechSynthesisUtterance(data.delivery);
+      const jokeSpeech = new SpeechSynthesisUtterance(data.joke);
         jokeSpeech.lang= languageCode;
       window.speechSynthesis.speak(jokeSpeech);
     }
