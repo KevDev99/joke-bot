@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import './App.css';
 
 /** Assets */
-import Joker from './assets/joker.svg';
+import Joker from './favicon.svg';
 import Twitter from './assets/icons/twitter.png';
 import Github from './assets/icons/github.png';
 

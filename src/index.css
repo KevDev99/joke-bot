@@ -73,6 +73,7 @@ main {
 
 .joke-container {
   margin-top: 2rem;
+  padding: 10px;
 }
 
 .joke-text {
